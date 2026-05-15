@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Website - Insta Web Works Chatbot</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%); }
+    .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
+    h1 { font-size: 2.5rem; color: #1e293b; margin-bottom: 0.5rem; font-weight: 700; }
+    p { color: #64748b; font-size: 1.1rem; max-width: 500px; line-height: 1.6; }
+    .badge { display: inline-block; background: #dbeafe; color: #2563eb; padding: 0.5rem 1.2rem; border-radius: 999px; font-size: 0.85rem; margin-top: 1.5rem; font-weight: 500; }
+    .arrow { font-size: 2rem; color: #2563eb; animation: bounce 2s infinite; margin-top: 2rem; }
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>Insta Web Works</h1>
+    <p>This is a test page to verify the redesigned chatbot widget appears in the bottom-right corner. Click the blue chat button to open it.</p>
+    <span class="badge">✅ Redesigned UI Test</span>
+    <div class="arrow">↓</div>
+  </div>
+
+  <script>
+    (function() {
+      var iframe = document.createElement('iframe');
+      iframe.src = 'http://localhost:3000';
+      iframe.style.cssText = 'position:fixed;bottom:0;right:0;width:100%;height:100%;border:none;z-index:-1;';
+      document.body.appendChild(iframe);
+    })();
+  </script>
+</body>
+</html>
